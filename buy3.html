@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/jpeg" href="mer.jpeg"/>
+</head>
+<a href="index.html">
+    <button>Home</button></a>
+<a href="dr3.html">
+        <button>Back</button></a><br>
+<body>
+    <style>
+		body {
+		  background-image: url('gb.jpg');
+		  background-repeat: no-repeat;
+		  background-size: 1400px 1400px;
+		}
+    </style>
+           <h1 class="diff">Payment Details</h1>
+        <form class="container">
+        <b>Name:<br></b>
+        <input type="text" name="name" placeholder="abc">
+        <br>
+        <b>Surname:<br></b>
+        <input type="text" name="sname" placeholder="xyz">
+        <br>
+        <b>Contact Number:<br></b>
+        <input type="tel" name="number" placeholder="1234567890">
+        <br>
+        <b>Address:<br></b>
+        <div class="form-group">
+            <input type="street" 
+                   class="form-control" 
+                   id="autocomplete" 
+                   placeholder="Street">
+            <input type="Landmark" 
+                   class="form-control" 
+                   id="autocomplete" 
+                   placeholder="Landmark"> <br><br>        
+            <input type="city" 
+                   class="form-control" 
+                   id="inputCity" 
+                   placeholder="City">
+            
+            <input type="state" 
+                   class="form-control" 
+                   id="inputState" 
+                   placeholder="State"><br><br>
+            
+            <input type="zip" 
+                   class="form-control" 
+                   id="inputZip" 
+                   placeholder="Zip">
+            
+            <input type="country" 
+                   class="form-control" 
+                   id="inputCountry" 
+                   placeholder="Country"><br><br>
+          </div>
+          <h2 class="diff">Payment Type:</h2>
+            <b><input type="radio" name="type" value="Credit & Debit Card">Credit & Debit Card<br><br></b>
+            <div class="form-container">
+                <div class="field-container">
+                    Name on Card:<br>
+                    <input id="name" type="text" placeholder="abc">
+                </div>
+                <div class="field-container">
+                    Card Number:<br>
+                    <input id="cardnumber" type="text" inputmode="numeric" placeholder="0123456789101112">
+                </div>
+                <div class="field-container">
+                    Expiration (mm/yy):<br>
+                    <input id="expirationdate" type="text" inputmode="numeric" placeholder="08/22">
+                </div>
+                <div class="field-container">
+                    CVV:<br>
+                    <input id="securitycode" type="password" inputmode="numeric" placeholder="****"><br><br>
+                </div>
+            </div>
+            <b><input type="radio" name="type" value="COD">COD<br></b>
+            <h3 class="diff">Amount: Rs 3500</h3>
+    </form>
+    <a href="submit.html">
+        <button>Submit</button></a>     
+</body>
+</html>
