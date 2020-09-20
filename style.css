@@ -184,3 +184,29 @@ table {
     transform: scale(1.5);
     border: 4px solid black;
 }
+
+.slideshow {
+    /* background-color: #131921; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .slideshow img {
+    width: auto;
+    padding: 3rem;
+    max-height: 550px;
+    animation: fade;
+    animation-duration: 1.2s;
+    height: 450px;  
+  }
+
+

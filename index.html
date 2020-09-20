@@ -21,13 +21,14 @@
     </div>
 
     <b><h1>About Me</h1></b>
-    <marquee hspace=10 behavior="scroll" scrollamount="8" onmouseover="this.stop();" onmouseout="this.start();">
-        <img src="mer.jpeg" class=imgstyle> &nbsp&nbsp&nbsp&nbsp
-        <img src="dr3.jpeg " class=imgstyle> &nbsp&nbsp&nbsp&nbsp
-        <img src="dr2.jpeg " class=imgstyle> &nbsp&nbsp&nbsp&nbsp
-        <img src="des1.png " class=imgstyle> &nbsp&nbsp&nbsp&nbsp
-    </marquee>
-
+    <div class="slideshow">
+        <img class="slide" src="mer.jpeg" alt="">
+        <img class="slide" src="dr3.jpeg" alt="" />
+        <img class="slide" src="dr2.jpeg" alt="">
+        <img class="slide" src="des1.png" alt="">  
+  
+        <!-- slideshow end -->
+      </div>
 
     <div id="about ">
         <br>
@@ -49,6 +50,33 @@
             <h3>All Rights Reserved.</h3>
         </center>
         <hr>
+<script>
+        var Slides = document.getElementsByClassName("slide");
+var NoSlides = Slides.length;
+var currentSlide = 0;
+
+function IncreamentSlide() {
+  currentSlide = currentSlide + 1;
+  currentSlide = currentSlide % NoSlides;
+}
+
+function displayCurrent() {
+  Slides[currentSlide].style.display = "block";
+}
+
+function hideall() {
+  for (i = 0; i < NoSlides; i++) {
+    Slides[i].style.display = "none";
+  }
+}
+function main() {
+  hideall();
+  displayCurrent();
+  IncreamentSlide();
+}
+main();
+setInterval(main, 2000);
+</script>
 </body>
 
 </html>
