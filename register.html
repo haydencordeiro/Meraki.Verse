@@ -97,6 +97,7 @@ function checkInputs() {
 		temp=false;
         setErrorFor(password2, 'Password2 cannot be blank');
 	} else if(passwordValue !== password2Value) {
+		temp=false;
 		setErrorFor(password2, 'Passwords does not match');
 	} else{
 		setSuccessFor(password2);
