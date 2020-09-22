@@ -125,8 +125,28 @@ button{
     width: 25%;
     font-size: 16px;
     font-family: inherit;
+    margin: 0;
 }
 
+#cen{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 30px 0px ;
+}
+
+.newb{
+    background-color: #ef94d5;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px 30px;
+    text-align: center;
+    /* width: 25%; */
+    font-size: 1rem;
+    font-family: inherit;
+    text-decoration:none;
+    
+}
 a{
     text-decoration:none;
 }

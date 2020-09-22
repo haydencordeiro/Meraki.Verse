@@ -93,21 +93,6 @@ button:hover {
     margin: 10px;
 }
 
-form {
-    color: black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: oblique;
-    font-size: 18px;
-    padding: 4px 6px;
-}
-
-.container {
-    background-color: #EDBFD6;
-    border: 3px solid black;
-    padding: 10px;
-    width: 400px;
-}
-
 #about {
     font-size: 18px;
 }
