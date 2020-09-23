@@ -91,7 +91,8 @@
                     <h2>Payment Type:</h2><img src="https://img.icons8.com/color/36/000000/visa.png"> <img
                         src="https://img.icons8.com/color/36/000000/mastercard.png"> <img
                         src="https://img.icons8.com/color/36/000000/amex.png"><br>
-                    <br><b><input type="radio" name="type" value="Credit & Debit Card">Credit & Debit Card<br><br></b>
+                    <br><b><input id="pmethod" type="radio" name="type" value="1" checked> Credit & Debit
+                        Card<br><br></b>
 
                     <div class="form-control">
                         <label for="name">Name on Card</label>
@@ -122,7 +123,9 @@
                         <small>Error message</small>
                     </div>
                 </div>
-                <b><input type="radio" name="type" value="COD">COD<br></b>
+                <b>
+                    <input type="radio" name="type" value="2">COD<br>
+                </b>
                 <h3 class="diff">Amount: Rs 3000</h3>
                 <button>Submit</button></a>
             </form>
@@ -237,43 +240,44 @@
                 else {
                     setSuccessFor(zip);
                 }
+                if (document.getElementById('pmethod').checked) {
+                    if (cnameValue === '') {
+                        temp = false;
+                        setErrorFor(cname, 'This field cannot be blank');
+                    } else {
+                        setSuccessFor(cname);
+                    }
 
-                if (cnameValue === '') {
-                    temp = false;
-                    setErrorFor(cname, 'This field cannot be blank');
-                } else {
-                    setSuccessFor(cname);
-                }
+                    if (cc_numValue == '') {
+                        temp = false;
+                        setErrorFor(cc_num, 'This field cannot be blank  ');
+                    }
+                    else if (!isccnum(cc_numValue)) {
+                        temp = false;
+                        setErrorFor(cc_num, 'Not a valid Card Number');
+                    }
+                    else {
+                        setSuccessFor(cc_num);
+                    }
 
-                if (cc_numValue == '') {
-                    temp = false;
-                    setErrorFor(cc_num, 'This field cannot be blank  ');
-                }
-                else if (!isccnum(cc_numValue)) {
-                    temp = false;
-                    setErrorFor(cc_num, 'Not a valid Card Number');
-                }
-                else {
-                    setSuccessFor(cc_num);
-                }
+                    if (cc_expValue === '') {
+                        temp = false;
+                        setErrorFor(cc_exp, 'This field cannot be blank');
+                    } else {
+                        setSuccessFor(cc_exp);
+                    }
 
-                if (cc_expValue === '') {
-                    temp = false;
-                    setErrorFor(cc_exp, 'This field cannot be blank');
-                } else {
-                    setSuccessFor(cc_exp);
-                }
-
-                if (cc_cvValue == '') {
-                    temp = false;
-                    setErrorFor(cc_cv, 'This field cannot be blank  ');
-                }
-                else if (!isccv(cc_cvValue)) {
-                    temp = false;
-                    setErrorFor(cc_cv, 'Not a valid CV');
-                }
-                else {
-                    setSuccessFor(cc_cv);
+                    if (cc_cvValue == '') {
+                        temp = false;
+                        setErrorFor(cc_cv, 'This field cannot be blank  ');
+                    }
+                    else if (!isccv(cc_cvValue)) {
+                        temp = false;
+                        setErrorFor(cc_cv, 'Not a valid CV');
+                    }
+                    else {
+                        setSuccessFor(cc_cv);
+                    }
                 }
 
                 if (temp) {
